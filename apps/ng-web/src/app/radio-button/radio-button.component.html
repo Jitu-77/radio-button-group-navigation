@@ -1,0 +1,15 @@
+<form [formGroup]="form" >
+<label class="container" >
+    <input #inputBlock type="radio" name="inputItem" [id]="'radio'+index" (focus)="focusData(index)"
+    formControlName="inputItem" [checked]="item.checked"
+    (keyup.arrowup) ="onKeyPress('up',index)"    
+    (keyup.arrowleft) ="onKeyPress('left',index)"    
+    (keyup.arrowdown) ="onKeyPress('down',index)"    
+    (keyup.arrowright) ="onKeyPress('right',index)"    
+    >
+    <span class="checkmark" [ngStyle]="{'background-Color': item.value}"></span>
+</label>
+</form>
+
+
+

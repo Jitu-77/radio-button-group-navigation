@@ -1,0 +1,16 @@
+
+<div class="parent-container">
+  <div class="grid-container">
+    <div *ngFor="let item of inputItems; let i = index">
+        <brew-radio-button [item]="modifiedOutputItems[i]" [index]="i"
+          [checkedIndex]="checkedIndex"
+          (focusItem)="focusItemTrigger($event)"
+          ></brew-radio-button>
+    </div>
+  </div>
+  <div class="output">
+   {{
+      stringifySelectedValue
+    }}
+  </div>
+</div>
